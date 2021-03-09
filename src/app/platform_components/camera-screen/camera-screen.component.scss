@@ -1,0 +1,20 @@
+.custom-ion-content { --background: transparent !important; }
+
+.bg-black {
+    --background: black !important;
+    color: white !important;
+    font-size: 40px !important;
+}
+
+.imageContainer {
+    height: 100%;width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.videoContainer video {
+    width: 100vw !important;
+    height: 300px !important;
+}

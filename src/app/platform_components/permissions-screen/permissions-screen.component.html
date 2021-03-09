@@ -1,0 +1,10 @@
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let perm of androidPermissions;let i =index" (click)="checkPermissions(perm,i)">
+      <div>
+        <h3>{{perm}}</h3>
+        <h5 *ngIf="androidPermissionsStatus[i] != null">{{androidPermissionsStatus[i]}}</h5>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>

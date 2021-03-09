@@ -1,0 +1,41 @@
+<ion-content>
+  <div class="container">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-img *ngIf="imageFile" [src]="imageFile"></ion-img>
+          <video width="100%" height="300px" *ngIf="videoFile" [src]="videoFile" controls autoplay></video>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button expand="full" (click)="openImageFromCamera()">
+            Open Image From Camera
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button expand="full" (click)="openImageFromGallery()">
+            Open Image From Gallery
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button expand="full" (click)="openVideoFromCamera()">
+            Open Video From Camera
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button expand="full" (click)="openVideoFromGallery()">
+            Open Video From Gallery
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </div>
+</ion-content>

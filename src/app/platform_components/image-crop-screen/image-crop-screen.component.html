@@ -1,0 +1,13 @@
+<ion-content>
+  <div class="container">
+    <ion-grid>
+      <ion-row></ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-img *ngIf="imageFile" [src]="imageFile"></ion-img>
+          <ion-button expand="full" (click)="selectAndCrop()">Select Image And Crop</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "WireFrameIonicCordova",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

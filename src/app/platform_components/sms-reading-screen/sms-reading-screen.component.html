@@ -1,0 +1,28 @@
+<ion-content>
+  <div class="container">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="ion-text-center">
+          <h3 *ngIf="message">{{message}}</h3>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="ion-text-center">
+          <ion-text *ngIf="appHash" >
+           App Hash: {{appHash}}
+          </ion-text>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button *ngIf="!isListening" expand="full" (click)="startListening()">
+            Start Listening
+          </ion-button>
+          <ion-text *ngIf="isListening" class="ion-text-center">
+            <h5>Listening for messages</h5>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+      </ion-grid>
+  </div>
+</ion-content>

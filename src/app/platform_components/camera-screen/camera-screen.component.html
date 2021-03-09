@@ -1,0 +1,44 @@
+<ion-content [fullscreen]="true" [ngClass]="{'custom-ion-content':showCamera}" *ngIf="showCamera">
+
+
+</ion-content>
+<ion-footer class="bg-black" *ngIf="showCamera">
+    <ion-grid>
+        <ion-row>
+            <ion-col class="ion-text-center">
+                <ion-icon name="camera" (click)="takePicture()"></ion-icon>
+            </ion-col>
+            <ion-col class="ion-text-center" *ngIf="!isRecording">
+                <ion-icon name="videocam-outline" (click)="recordVideo()"></ion-icon>
+            </ion-col>
+            <ion-col class="ion-text-center" *ngIf="isRecording">
+                <ion-icon name="stop-circle-outline" (click)="stopRecording()"></ion-icon>
+            </ion-col>
+            <ion-col class="ion-text-center">
+                <ion-icon name="camera-reverse-outline" (click)="switchCamera()"></ion-icon>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-footer>
+
+<ion-content [fullscreen]="true" class="bg-black" *ngIf="!showCamera">
+    <div class="imageContainer" *ngIf="showPicture">
+        <ion-img [src]="picture"></ion-img>        
+    </div>
+    <div class="videoContainer" *ngIf="showVideo">
+        <video [src]="video" controls autoplay>
+        </video>      
+    </div>
+
+</ion-content>
+<ion-footer *ngIf="!showCamera">
+   <ion-grid>
+       <ion-row>
+           <ion-col>
+            <ion-button expand="full" (click)="backToCamera()">
+                <ion-text>Go Back</ion-text>
+            </ion-button>
+           </ion-col>
+       </ion-row>
+   </ion-grid>
+</ion-footer>

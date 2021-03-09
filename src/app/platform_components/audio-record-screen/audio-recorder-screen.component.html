@@ -1,0 +1,40 @@
+<ion-content>
+
+<div class="container">
+  <ion-grid>
+    <ion-row *ngIf="isRecording">
+      <ion-col class="ion-text-center">
+        <h3>{{recordTime }}</h3>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" (click)="startRecording()" >
+          start
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" (click)="stopRecording()">
+          stop
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" (click)="replayRecording()">
+         replay
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="audio != null">
+      <ion-col class="ion-text-center">
+        <audio #audioTag controls autoplay [src]="audio"></audio>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</div>
+</ion-content>

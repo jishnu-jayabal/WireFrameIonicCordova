@@ -1,0 +1,36 @@
+<ion-content>
+  <div class="container">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-list>
+            <ion-item *ngFor="let place of places">
+              {{place.areasOfInterest}},
+              {{place.locality}},
+              {{place.subLocality}},{{place.subAdministrativeArea}},
+              {{place.administrativeArea}},
+              {{place.countryCode}},
+              {{place.postalCode}},
+          
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="coords">
+        <ion-col class="ion-text-center">
+          <ion-text >
+            {{coords.latitude}}
+          </ion-text>
+          <ion-text >
+            {{coords.longitude}}
+          </ion-text>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="getCurrentLocation()" expand="full">Get Current lat/lon</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
